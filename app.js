@@ -3,6 +3,7 @@ const https = require("https")
 const port = process.env.PORT || 3000
 const mongoose = require("mongoose")
 const dotenv = require('dotenv')
+const ejs = require('ejs')
 
 dotenv.config()
 const username = process.env.DB_USERNAME
