@@ -1,6 +1,6 @@
 const express = require("express");
 const https = require("https")
-const port = process.env.PORT || 3000
+const port = process.env.PORT || 5000
 const mongoose = require("mongoose")
 const dotenv = require('dotenv')
 
@@ -15,7 +15,7 @@ const app = express();
 app.set('view engine', 'ejs');
 app.use(express.urlencoded({extended: true}));
 app.use(express.static("public"));
-mongoose.connect("mongodb+srv://aditya:201B015@daily-journal.ar5mtft.mongodb.net/?retryWrites=true&w=majority")
+mongoose.connect(`mongodb+srv://${username}:${password}@daily-journal.ar5mtft.mongodb.net/?retryWrites=true&w=majority`)
 
 // let posts = [];
 
